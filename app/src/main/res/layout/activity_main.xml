@@ -13,7 +13,7 @@
         tools:context="com.example.android.androidmusicstructureapp.MainActivity">
 
         <LinearLayout
-            android:id="@+id/nowIsPlaying"
+            android:id="@+id/now_Playing"
             style="@style/MenuCategoryStyle"
             android:background="@color/category_now_is_playing"
             android:orientation="horizontal">

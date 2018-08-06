@@ -13,26 +13,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Find the Layout that shows the Now Is Playing category
-        LinearLayout nowIsPlaying = (LinearLayout) findViewById(R.id.nowIsPlaying);
+        // Find the Layout that shows the Now Playing category
+        LinearLayout now_Playing = (LinearLayout) findViewById(R.id.now_Playing);
         LinearLayout albums = (LinearLayout) findViewById(R.id.albums);
         LinearLayout artists = (LinearLayout) findViewById(R.id.artists);
         LinearLayout musicStore = (LinearLayout) findViewById(R.id.musicStore);
 
 
-        nowIsPlaying.setOnClickListener
+        now_Playing.setOnClickListener
                 (new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent nowIsPlayingIntent = new Intent(MainActivity.this, nowIsPlaying.class);
-                        startActivity(nowIsPlayingIntent);
+                        Intent now_PlayingIntent = new Intent(MainActivity.this, Now_playingActivity.class);
+                        startActivity(now_PlayingIntent);
                     }
                 });
 
         albums.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent albumsIntent = new Intent(MainActivity.this, albums.class);
+                Intent albumsIntent = new Intent(MainActivity.this, Album.class);
                 startActivity(albumsIntent);
             }
         });
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         artists.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent artistsIntent = new Intent(MainActivity.this, artists.class);
+                Intent artistsIntent = new Intent(MainActivity.this, Artist.class);
                 startActivity(artistsIntent);
             }
         });
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         musicStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent musicStoreIntent = new Intent(MainActivity.this, musicStore.class);
+                Intent musicStoreIntent = new Intent(MainActivity.this, MusicStore.class);
                 startActivity(musicStoreIntent);
             }
         });
